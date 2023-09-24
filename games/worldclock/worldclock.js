@@ -1,0 +1,5 @@
+const allzone = document.getElementById('allzone')
+currenttime = document.getElementById('currenttime')
+currenttime.innertext = new date().tolocatestring('en-us',{timeStyle:'full'})
+fetch('timezone.json').then(res=>res.json()).then(data=>{console.log(data)})
+.catch(err => console.log(err))

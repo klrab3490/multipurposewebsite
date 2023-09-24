@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Reset Default Styles */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #081b29 url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+
+.div {
+  display: flex;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+li {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  font-size: 0;
+}
+
+.box {
+  margin: 0.5px;
+  width: 75px;
+  height: 75px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 15px;
+}
+
+table{
+  align-items: center;
+}
+
+table td {
+  padding-left: 10px;
+}
+
+#tog {
+  margin: 40px 0px;
+  font-size: 20px;
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#reset-btn {
+  margin: 40px 0px;
+  font-size: 20px;
+  text-align: left;
+  background-color: green;
+  color: #000;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Additional Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10%;
+  background: #081b29;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
+
+.navbar {
+  padding-top: 10px;
+}
+
+.navbar a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: rgb(14, 148, 226);
+}
