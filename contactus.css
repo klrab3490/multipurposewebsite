@@ -1,62 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* Reset Default Styles */
+
 *{
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins',sans-serif;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
 }
 
-/* Global Styles */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #081b29;
-  color: white;
+body{
+    background-color: #081b29;
+    color: white;
 }
 
-/* Header Styles */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 10%;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  z-index: 100;
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo {
-  font-size: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  color: white;
+.logo{
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
 }
 
-.navbar {
-  padding-top: 10px;
+.navbar{
+    padding-top: 10px;
+}
+
+.menu-toggle,
+.overlay,
+.close-icon{
+    display: none;
 }
 
 .navbar a {
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 400;
-  color: white;
-  margin-left: 40px;
-  transition: 0.5s;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    margin-left: 40px;
+    transition: .3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: rgb(14, 148, 226);
+.navbar a.normal-buttons:hover,
+.navbar a.active{
+    color: rgb(14, 148, 226);
+    transform: translateY(10px);
 }
 
-/*Contact Us*/
 .wrapper {
     position: absolute;
     top: 50%;
@@ -64,26 +62,51 @@ body {
     transform: translate(-50%, -50%);
     max-width: 350px;
     width: 100%;
-    background: #ffff;
+    background: #ecdede;
     padding: 25px;
     border-radius: 5px;
+    padding-top: 30px;
+    
 }
 
 .wrapper h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: Black;
+    font-weight: 500;
 }
 
 .wrapper .input_field {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.wrapper .input_field input {
-    border: 1px solid #e0e0e0;
-    width: 100%;
-    padding: 10px;
+
+#name{
+    width: 230px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+#phone{
+    width: 230px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+#email{
+    width: 230px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
 }
 
 .wrapper.input_field input[type="text"],
@@ -98,27 +121,112 @@ body {
     height: 80px;
 }
 
+#message{
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
 .wrapper .btn input[type="submit"] {
     border: 0px;
     margin-top: 15px;
     padding: 10px;
     text-align: center;
     width: 100%;
-    background-color:  rgb(14, 148, 226);
+    background-color: rgb(14, 148, 226);
     color: white;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-weight: bold;
     border-radius: 25px;
     cursor: pointer;
+    font-size: 15px;
+    transition: .4s;
+}
+
+.btn input[type="submit"]:hover{
+    background-color: #fff;
+    color: rgb(14, 148, 226);
 }
 
 #error_message {
-    margin-bottom: 20px;
-    background: #fe8b8e;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background: #fa7074;
     padding: 0px;
     text-align: center;
-    font-size: 30px;
-    transition: all 0.5s ease;
+    font-size: 20px;
+    transition: all 1s ease;
+    border-radius: 10px;
 }
 
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    /* Reset header padding for mobile view */
+    .header {
+        padding: 10px 5%;
+    }
+
+    /* Hide the navbar by default on mobile screens */
+    .navbar {
+        display: none;
+    }
+
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styling for the overlay */
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 27, 41, 0.9); /* Slightly transparent dark background */
+        z-index: 2;
+    }
+
+    /* Styling for the close icon in the overlay */
+    #close-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 3;
+        color: white; /* Make it visible on the dark background */
+    }
+
+    /* Styles for the navigation menu within the overlay */
+    .overlay .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background: #081b29;
+        padding: 10px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media query for medium-sized screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+    
+}
