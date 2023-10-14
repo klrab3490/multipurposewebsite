@@ -55,6 +55,37 @@ body{
     transform: translateY(10px);
 }
 
+.login{
+    height: 20px;
+    width: 70px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0e94e2;
+    z-index: 1;
+    overflow: hidden;
+}
+
+a.login::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #0e94e2;
+    border-radius: 10px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+a.login:hover::before{
+    transform: scaleX(1);
+}
+
 .wrapper {
     position: absolute;
     top: 50%;
@@ -83,7 +114,7 @@ body{
 }
 
 #name{
-    width: 230px;
+    width: 300px;
     height: 40px;
     padding-left: 10px;
     font-size: 15px;
@@ -92,7 +123,7 @@ body{
 }
 
 #phone{
-    width: 230px;
+    width: 300px;
     height: 40px;
     padding-left: 10px;
     font-size: 15px;
@@ -101,7 +132,7 @@ body{
 }
 
 #email{
-    width: 230px;
+    width: 300px;
     height: 40px;
     padding-left: 10px;
     font-size: 15px;
