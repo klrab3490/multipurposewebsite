@@ -7,9 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    place-items: center;
+body{
     background-color: #081b29;
     color: white;
 }
@@ -56,41 +54,30 @@ body {
     transform: translateY(10px);
 }
 
-h1{
-    text-align: center;
-    margin: 20px 0 20px 0;
+#canvas-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the container take the full viewport height */
+    background-color: #081b29; /* Background color for the container */
 }
 
-h2{
-    text-align: center;
-    margin-bottom: 20px;
+/* Responsive styles for the Pacman canvas and related elements */
+#canvas {
+    width: 100%; /* Make the canvas take the full width of the container */
+    max-width: 500px; /* Set a maximum width to prevent it from becoming too large */
+    height: auto; /* Maintain the aspect ratio */
+    /* Center the canvas horizontally */
+    margin: 0 auto;
+    display: block;
 }
 
-.board{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    border: 2px solid black;
-    width: 630px;
-    background-color: rgb(74, 74, 198);  
-}
-
-ul{
-    display: grid;
-    place-items: center;
-}
-
-ul p{
-    margin: 5px;
-    width: 75px;
-    height: 75px;
-    border: 2px solid black;
-    border-radius: 100px;
-    background-color: white;
-}
-
-ul:hover{
-    cursor: pointer;
-    background-color: rgb(98, 136, 238);
+/* Styles for the images used in the game */
+#animation, #ghosts {
+    max-width: 100%; /* Ensure the images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the images horizontally */
 }
 
 /* Media query for small screens (e.g., mobile devices) */
@@ -151,35 +138,4 @@ ul:hover{
         font-size: 20px;
         margin-bottom: 10px;
     }
-
-    .board{
-        width: 500px;
-    }
-    ul p{
-        width: 55px;
-        height: 55px;        
-    }
-    
-}
-@media(max-width:520px){
-    .board{
-        width: 400px;
-    }
-    ul p{
-        width: 40px;
-        height: 40px;
-        
-    }
-    
-}
-@media(max-width:420px){
-    .board{
-        width: 320px;
-    }
-    ul p{
-        width: 30px;
-        height: 30px;
-        
-    }
-    
 }

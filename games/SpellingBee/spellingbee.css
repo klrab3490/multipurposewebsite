@@ -7,11 +7,11 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    place-items: center;
+body{
     background-color: #081b29;
     color: white;
+    width: 100%;
+    height: 100vh;
 }
 
 .header{
@@ -56,41 +56,36 @@ body {
     transform: translateY(10px);
 }
 
-h1{
-    text-align: center;
-    margin: 20px 0 20px 0;
-}
-
-h2{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.board{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    border: 2px solid black;
-    width: 630px;
-    background-color: rgb(74, 74, 198);  
-}
-
-ul{
+.all {
     display: grid;
     place-items: center;
+    margin-top: 100px;
 }
 
-ul p{
-    margin: 5px;
-    width: 75px;
-    height: 75px;
-    border: 2px solid black;
-    border-radius: 100px;
-    background-color: white;
+img {
+    width: 300px;
 }
 
-ul:hover{
+#inp {
+    margin-top: 30px;
+    width: 485px;
+    padding: 7px;
+}
+
+#btn {
+    width: 500px;
+    padding: 5px;
     cursor: pointer;
-    background-color: rgb(98, 136, 238);
+    margin: 20px 0 20px 0;
+    background-color: aqua;
+}
+
+.btn2 {
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 100px 0 100px;
+    background-color: rgb(234, 130, 65);
 }
 
 /* Media query for small screens (e.g., mobile devices) */
@@ -152,34 +147,44 @@ ul:hover{
         margin-bottom: 10px;
     }
 
-    .board{
-        width: 500px;
+    .all {
+        text-align: center;
+        padding: 20px;
+        margin: 20px 0; /* Adjust margin to provide spacing above and below the content */
     }
-    ul p{
-        width: 55px;
-        height: 55px;        
+
+    .all img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
     }
-    
-}
-@media(max-width:520px){
-    .board{
-        width: 400px;
+
+    #inp {
+        width: 90%;
+        padding: 10px;
+        margin-top: 20px;
     }
-    ul p{
-        width: 40px;
-        height: 40px;
-        
+
+    #btn {
+        width: 90%;
+        padding: 10px;
+        cursor: pointer;
+        background-color: aqua;
+        margin: 20px 0;
     }
-    
-}
-@media(max-width:420px){
-    .board{
-        width: 320px;
+
+    .cont {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Stack buttons vertically for better mobile alignment */
+        align-items: center;
     }
-    ul p{
-        width: 30px;
-        height: 30px;
-        
+
+    .btn2 {
+        width: 90%;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(234, 130, 65);
+        margin: 10px 0;
     }
-    
 }
