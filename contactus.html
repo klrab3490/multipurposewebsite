@@ -5,26 +5,24 @@
         <meta charset="UTF-8">
         <title>Contact Us</title>
         <link rel="stylesheet" href="contactus.css">
-        <script src="contactus.js">
-        </script>
+        
     </head>
 
     <body>
         
         <!--Navbar-->
         <header class="header">
-            <a href="index.html" class="logo">Inception Bros.</a>
+            <a href="website.html" class="logo">Inception Bros.</a>
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
             <div class="overlay" id="overlay">
                 <div class="nav">
-                    <a href="index.html" >Home</a>
+                    <a href="website.html" >Home</a>
                     <a href="contactus.html">Contact</a>
-                    <a href="login.html">Login</a>
                 </div>
             </div>
             <div class="close-icon" id="close-icon">&times;</div>
             <nav class="navbar" id="navbar">
-                <a href="index.html" class="normal-buttons">Home</a>
+                <a href="website.html" class="normal-buttons">Home</a>
                 <a href="contactus.html" class="active">Contact</a>
                 <a href="login.html" class="login">Login</a>
             </nav>
@@ -33,7 +31,7 @@
         <!--Contact Us-->
         <div class="wrapper">
             <h2>Contact Us</h2>
-            <form action="mailto:abelronysam@gmail.com" method="post" name="Contact" id="myform" onsubmit="return validate();">
+            <form method="post" name="Contact" id="myform" onsubmit="return validate();">
                 <div class="input_field">
                     <input type="text" placeholder="Name" id="name">
                 </div>
@@ -53,29 +51,7 @@
             </form>
         </div>
         
-        <script>
-            const menuButton = document.querySelector('#menu-toggle'); // Updated to match the correct ID
-            const closeIcon = document.querySelector('#close-icon'); // Updated to match the correct ID
-            const navbar = document.querySelector('#navbar');
-            const overlay = document.querySelector('#overlay');
-        
-            menuButton.addEventListener('click', () => {
-                navbar.classList.add('show-menu');
-                overlay.style.display = 'block';
-                closeIcon.style.display = 'block';
-            });
-        
-            closeIcon.addEventListener('click', () => {
-                navbar.classList.remove('show-menu');
-                overlay.style.display = 'none';
-                closeIcon.style.display = 'none';
-            });
-        
-            overlay.addEventListener('click', () => {
-                navbar.classList.remove('show-menu');
-                overlay.style.display = 'none';
-                closeIcon.style.display = 'none';
-            });
+        <script src="contactus.js">
         </script>
            
     </body>

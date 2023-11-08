@@ -64,6 +64,7 @@ body{
     border: 1px solid #0e94e2;
     z-index: 1;
     overflow: hidden;
+    display: none;
 }
 
 a.login::before{

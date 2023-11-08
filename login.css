@@ -12,7 +12,7 @@ body {
     color: white;
 }
 
-.header{
+.header {
     top: 0;
     left: 0;
     width: 100%;
@@ -22,20 +22,20 @@ body {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     font-size: 30px;
     text-decoration: none;
     font-weight: 500;
     color: white;
 }
 
-.navbar{
+.navbar {
     padding-top: 10px;
 }
 
 .menu-toggle,
 .overlay,
-.close-icon{
+.close-icon {
     display: none;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .navbar a.normal-buttons:hover,
-.navbar a.active{
+.navbar a.active {
     color: rgb(14, 148, 226);
     transform: translateY(10px);
 }
@@ -57,19 +57,23 @@ body {
 .login_form_container {
     position: relative;
     width: 100%;
-    max-width: 400px; /* Adjust the maximum width as needed */
-    height: 50vh;
+    max-width: 400px;
+    /* Adjust the maximum width as needed */
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
+    /* Center horizontally */
     background: #081b29;
     border-radius: 50px 5px;
     overflow: hidden;
-    padding: 20px; /* Add padding to the container */
-    box-sizing: border-box; /* Include padding in the width and height */
+    padding: 20px;
+    /* Add padding to the container */
+    box-sizing: border-box;
+    /* Include padding in the width and height */
 }
-  
+
 
 .login_form_container::before {
     position: absolute;
@@ -94,6 +98,7 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -125,7 +130,19 @@ h2 {
     justify-content: start;
 }
 
-.input_text {
+#email {
+    width: 95%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(14, 148, 226);
+    font-size: 20px;
+    padding-left: 10px;
+    color: rgb(14, 148, 226);
+}
+
+#password {
     width: 95%;
     height: 30px;
     background: transparent;
@@ -194,12 +211,21 @@ h2 {
     text-shadow: 0 0 10px #00ccff;
 }
 
-.input_group input:focus ~ label,
-.input_group input:valid ~ label {
+.input_group input:focus~label,
+.input_group input:valid~label {
     top: -20px;
     left: 0;
     color: #000;
     font-size: 12px;
+}
+
+.extra {
+    margin-left: 10px;
+}
+
+#sign {
+    margin-left: 110px;
+    color: #0e94e2;
 }
 
 /* Media query for small screens (e.g., mobile devices) */
@@ -209,7 +235,8 @@ h2 {
     }
 
     .navbar {
-        display: none; /* Hide the navbar */
+        display: none;
+        /* Hide the navbar */
     }
 
     #menu-toggle {
@@ -237,7 +264,7 @@ h2 {
         z-index: 21;
     }
 
-    .overlay .nav{
+    .overlay .nav {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -251,7 +278,7 @@ h2 {
         z-index: 22;
     }
 
-    .nav{
+    .nav {
         flex-direction: column;
         align-items: center;
         padding: 10px;
@@ -262,7 +289,8 @@ h2 {
     }
 
     .login_form_container {
-        max-height: 550px; /* Remove max-height for smaller screens */
+        max-height: 550px;
+        /* Remove max-height for smaller screens */
     }
 }
 
@@ -270,11 +298,10 @@ h2 {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .login_form_container {
         padding: 0;
-        max-height: 650px; /* Remove max-height for smaller screens */
-    }   
+        max-height: 650px;
+        /* Remove max-height for smaller screens */
+    }
 }
 
 /* Media query for larger screens */
-@media screen and (min-width: 1025px) {
-    
-}
+@media screen and (min-width: 1025px) {}

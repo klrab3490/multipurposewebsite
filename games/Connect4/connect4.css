@@ -93,6 +93,13 @@ ul:hover{
     background-color: rgb(98, 136, 238);
 }
 
+.menu-buttons{
+    text-decoration: none;
+    color: white;
+    margin: 10px 40px 10px 40px;
+    font-size: 25px;
+}
+
 /* Media query for small screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
     /* Reset header padding for mobile view */
@@ -141,7 +148,7 @@ ul:hover{
         flex-direction: column;
         align-items: center;
         position: absolute;
-        background: #081b29;
+        background: #1c3c53;
         padding: 10px;
         border-radius: 10px;
         top: 50%;

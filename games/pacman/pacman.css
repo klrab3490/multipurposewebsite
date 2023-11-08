@@ -54,6 +54,13 @@ body{
     transform: translateY(10px);
 }
 
+.menu-buttons{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
 #canvas-container {
     display: flex;
     justify-content: center; /* Center horizontally */

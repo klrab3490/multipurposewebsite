@@ -1,82 +1,34 @@
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stack Game</title>
-        <link rel="stylesheet" href="./stack.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Game</title>
+    <link rel="stylesheet" href="stack.css">
+</head>
 
-    <body>
-        
-        <!--Navbar-->
-        <header class="header">
-            <a href="../../index.html" class="logo">Inception Bros.</a>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-            <div class="overlay" id="overlay">
-                <div class="nav">
-                    <a href="../../index.html" class="normal-buttons">Home</a>
-                    <a href="../../contactus.html" class="normal-buttons">Contact</a>
-                    <a href="../../tools.html" class="normal-buttons">Tools</a>
-                    <a href="../../games1.html" class="active">Games</a>
-                </div>
-            </div>
-            <div class="close-icon" id="close-icon">&times;</div>
-            <nav class="navbar" id="navbar">
-                <a href="../../index.html" class="normal-buttons">Home</a>
-                <a href="../../contactus.html" class="normal-buttons">Contact</a>
-                <a href="../../tools.html" class="normal-buttons">Tools</a>
-                <a href="../../games1.html" class="active">Games</a>
-            </nav>
-        </header>
-        
-        <!-- Stack -->
-        <meta name="viewport" content="width=device-width,user-scalable=no">
-        <div id="container">
-            <div id="game"></div>
-            <div id="score">0</div>
-            <div id="instructions">Click (or press the spacebar) to place the block</div>
-            <div class="game-over">
-                <h2>Game Over</h2>
-                <p>You did great, you're the best.</p>
-                <p>Click or spacebar to start again</p>
-            </div>
-            <div class="game-ready">
-                <div id="start-button">Start</div>
-                <div></div>
-            </div>
+<body>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+
+    <div id="container">
+        <div id="game"></div>
+        <div id="score">0</div>
+        <div id="instructions">Click (or press the spacebar) to place the block</div>
+        <div class="game-over">
+            <h2>Game Over</h2>
+            <p>You did great, you're the best.</p>
+            <p>Click or spacebar to start again</p>
         </div>
-
-        <!-- Script -->
-        <script>
-            const menuButton = document.querySelector('#menu-toggle'); // Updated to match the correct ID
-            const closeIcon = document.querySelector('#close-icon'); // Updated to match the correct ID
-            const navbar = document.querySelector('#navbar');
-            const overlay = document.querySelector('#overlay');
-            
-            menuButton.addEventListener('click', () => {
-                navbar.classList.add('show-menu');
-                overlay.style.display = 'block';
-                closeIcon.style.display = 'block';
-            });
-            
-            closeIcon.addEventListener('click', () => {
-                navbar.classList.remove('show-menu');
-                overlay.style.display = 'none';
-                closeIcon.style.display = 'none';
-            });
-            
-            overlay.addEventListener('click', () => { 
-                navbar.classList.remove('show-menu');
-                overlay.style.display = 'none';
-                closeIcon.style.display = 'none';
-            });
-        </script>
-        <script language="JavaScript" type="text/javascript" src="js/three.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-        <script src="./stack.js"></script>
-    </body>
+        <div class="game-ready">
+            <div id="start-button">Start</div>
+            <div></div>
+        </div>
+    </div>
+    <script language="JavaScript" type="text/javascript" src="js/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="stack.js"></script>
+</body>
 
 </html>
