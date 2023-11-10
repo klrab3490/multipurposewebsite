@@ -48,10 +48,21 @@ body {
     transition: .3s;
 }
 
+#inactive{
+    color: #6e6868;
+}
+
 .navbar a.normal-buttons:hover,
 .navbar a.active {
     color: rgb(14, 148, 226);
     transform: translateY(10px);
+}
+
+.menu-buttons{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
 }
 
 .login_form_container {
@@ -111,6 +122,7 @@ body {
     border-radius: 50px 5px;
     inset: 5px;
     padding: 50px 40px;
+    padding-top: 25px;
     z-index: 10;
     color: rgb(14, 148, 226);
     text-align: center;

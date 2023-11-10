@@ -48,6 +48,17 @@ body {
     transition: .3s;
 }
 
+.menu-buttons{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 15px 40px 15px 40px;
+}
+
+#inactive{
+    color: #6e6868  ;
+}
+
 .navbar a.normal-buttons:hover,
 .navbar a.active {
     color: rgb(14, 148, 226);

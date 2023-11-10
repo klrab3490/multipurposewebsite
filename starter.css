@@ -53,6 +53,10 @@ body{
     transition: .3s;
 }
 
+#inactive{
+    color: #6e6868;
+}
+
 .navbar a.normal-buttons:hover,
 .navbar a.active{
     color: rgb(14, 148, 226);
@@ -166,7 +170,7 @@ a.login:hover::before{
 .btn-box a {
     height: 100%;
     width: 150px;
-    background: rgb(110, 104, 104);
+    background: #6e6868;
     border: 2px solid rgb(110, 104, 104);
     justify-content: space-between;
     align-items: center;

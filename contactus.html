@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Contact Us</title>
         <link rel="stylesheet" href="contactus.css">
+        <link rel="icon" href="games/Images/robot.png">
         
     </head>
 
@@ -12,7 +13,7 @@
         
         <!--Navbar-->
         <header class="header">
-            <a href="website.html" class="logo">Inception Bros.</a>
+            <a href="index.html" class="logo">Inception Bros.</a>
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
             <div class="overlay" id="overlay">
                 <div class="nav">
@@ -31,18 +32,18 @@
         <!--Contact Us-->
         <div class="wrapper">
             <h2>Contact Us</h2>
-            <form method="post" name="Contact" id="myform" onsubmit="return validate();">
+            <form action="https://formspree.io/f/meqbrnyj" method="post" name="Contact" id="myform" onsubmit="return validate();">
                 <div class="input_field">
-                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Name" name="Name" id="name" required="required">
                 </div>
                 <div class="input_field">
-                    <input type="text" placeholder="Phone" id="phone">
+                    <input type="text" placeholder="Phone" name="Mobile no"id="phone" required="required">
                 </div>
                 <div class="input_field">
-                    <input type="text" placeholder="Email" id="email">
+                    <input type="text" placeholder="Email" name="E mail" id="email" required="required">
                 </div>
                 <div class="input_field">
-                    <textarea placeholder="Message" id="message"></textarea>
+                    <textarea placeholder="Message" name="Message" id="message" required="required"></textarea>
                 </div>
                 <div class="btn">
                     <input type="submit">

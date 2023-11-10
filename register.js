@@ -1,16 +1,16 @@
-
-
-
 // Your web app's Firebase configuration
+// api for firebase
+
 var firebaseConfig = {
-    apiKey: 'AIzaSyAaZHisXqULiz8XvKsqTpBKtiDqPXKrRok',
-    authDomain: 'login-and-register-d3858.firebaseapp.com',
-    databaseURL: 'https://login-and-register-d3858-default-rtdb.firebaseio.com',
-    projectId: 'login-and-register-d3858',
-    storageBucket: 'login-and-register-d3858.appspot.com',
-    messagingSenderId: '120751601028',
-    appId: '1:120751601028:web:76efa5f442f6c8749b19d1',
-};
+    apiKey: "AIzaSyBlddgLoK1Jsy8DvFaMORaT1sy9q0ExE-c",
+    authDomain: "inception-bro-s.firebaseapp.com",
+    projectId: "inception-bro-s",
+    storageBucket: "inception-bro-s.appspot.com",
+    messagingSenderId: "347344553732",
+    appId: "1:347344553732:web:0b9006ded35c7f8ad17251"
+  };
+
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 // Initialize variables
@@ -98,5 +98,36 @@ function validate_field(field) {
         return true;
     }
 }
+
+
+const menuButton = document.querySelector('#menu-toggle'); // Updated to match the correct ID
+const closeIcon = document.querySelector('#close-icon'); // Updated to match the correct ID
+const navbar = document.querySelector('#navbar');
+const overlay = document.querySelector('#overlay');
+
+menuButton.addEventListener('click', () => {
+    navbar.classList.add('show-menu');
+    overlay.style.display = 'block';
+    closeIcon.style.display = 'block';
+});
+
+closeIcon.addEventListener('click', () => {
+    navbar.classList.remove('show-menu');
+    overlay.style.display = 'none';
+    closeIcon.style.display = 'none';
+});
+
+overlay.addEventListener('click', () => {
+    navbar.classList.remove('show-menu');
+    overlay.style.display = 'none';
+    closeIcon.style.display = 'none';
+});
+
+$(".input_text").focus(function(){
+    $(this).prev('.fa').addclass('glowIcon');
+});
+$(".input_text").focusout(function(){
+    $(this).prev('.fa').removeclass('glowIcon');
+});
 
     
